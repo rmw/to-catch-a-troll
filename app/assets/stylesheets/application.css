@@ -13,3 +13,107 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  font-family: 'Oxygen', sans-serif;
+
+}
+
+.loginpage{
+  background-color: black;
+  border-bottom: 4em solid black;
+  }
+
+.top-bar{
+  margin-bottom: 40px;
+}
+
+.top-bar .name h1 a:before {
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    position: relative;
+    width: 18px;
+}
+
+
+.logo{
+  margin: 0 auto;
+}
+
+.foundicon-flag{
+  color:gray;
+}
+
+.alert{
+  color:red;
+}
+
+.home-legend{
+  background-color: black;
+}
+a.search_link{
+  text-decoration: none;
+  color: #0066FF;
+}
+
+fieldset{
+  width: 30em;
+  margin: auto;
+}
+
+/*nav{
+  background-color: #e5e5e5;
+}
+
+nav li{
+  display: inline-block;
+  background-color: #e5e5e5;
+}*/
+
+/*.row { background-color: white; }*/
+
+
+.flag {
+  display: inline-block;
+  font-size: 2em;
+}
+.page {
+  .flag {
+    display: inline-block;
+  }
+}
+
+.highlighted {
+  line-height: 1.3;
+  padding: 2px 0;
+  border-left: 20px solid #FEEF14;
+  margin: 20px auto;
+}
+
+.highlighted h5{
+  background-color: #FEEF14;
+  padding: 4px 0;
+  display: inline;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.highlighted h5 strong{
+position: relative;
+left: -10px;
+}
+
+.vcard{
+  width: 20em;
+  background-color:#e4e1d7;
+}
+
+.fieldset user{
+  background-color: #e4e1d7;
+}
+
+.profile-box{
+  margin-top: 25em;
+  position: fixed;
+}

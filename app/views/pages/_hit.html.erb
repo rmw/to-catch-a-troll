@@ -1,0 +1,20 @@
+  <div class="row">
+<div class="large-12 columns">
+<div class="panel">
+
+ <% hit.highlights(:body).each do |highlight| %>
+  <i class="flag" id="flag-for-<%=hit.result.id%>">&#9873;</i>
+    <a class="search_link" href="<%=hit.result.base_url%>" target="_blank"><%= hit.result.base_url%></a>
+      <dd>Scraped at: <%=hit.result.updated_at.strftime("%m-%d-%Y")%>&nbsp;&nbsp;&nbsp;&nbsp;Hit Score: <%= sprintf "%.3f", hit.score%></dd>
+        <dl value="<%=hit.result.id%>"></dl>
+          <div class="highlighted">
+          <h5>
+            <strong>
+            <%= highlight.format {|passage| "#{passage}" }%>
+          </strong>
+        </h5>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>

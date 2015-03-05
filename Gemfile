@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -11,8 +11,13 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+gem 'foundation-icons-sass-rails'
+
+# For Background jobs
 gem 'cobweb', '~> 1.0.25'
 gem 'nokogiri'
 gem 'redis'
@@ -24,8 +29,9 @@ gem 'redis-namespace'
 gem 'sinatra'
 gem 'slop'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
+
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 # For Background jobs
 gem 'resque', require: "resque/server"
@@ -40,6 +46,13 @@ gem 'sidekiq', '~> 3.3.2'
 gem 'celluloid'
 gem 'connection_pool'
 
+gem 'capybara'
+gem 'rack_session_access'
+gem 'rails_12factor'
+gem "fakeweb", "~> 1.3"
+
+gem 'clockwork'
+gem 'sanitize'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -49,12 +62,11 @@ gem 'connection_pool'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   gem 'rspec-rails', '~> 3.0'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'simplecov', :require => false
+  gem 'factory_girl_rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

@@ -1,0 +1,21 @@
+<%= link_to 'Scrape a website', new_scraper_path , class:"button radius small secondary"%>
+
+<table>
+  <thead>
+    <tr>
+      <th width="500">URL</th>
+      <th>Time</th>
+      <th>Initiated By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @scrapers.each do |scraper| %>
+    <tr>
+      <td><%= scraper.url %></td>
+      <td><%= scraper.initiated_at %></td>
+      <td> Administrator </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
